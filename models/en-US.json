@@ -1,0 +1,91 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "song quiz",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AnswerIntent",
+          "samples": [
+            "{SongName}",
+            "{SongWriter}",
+            "tell me about {SongName}",
+            "tell me about {Writer}",
+            "tell me about {Album}",
+            "what do you know about {SongName}",
+            "what do you know about {SongWriter}",
+            "what do you know about {StatehoodYear}",
+            "what do you know about {StatehoodOrder}",
+            "what do you know about {Abbreviation}",
+            "{StateName} information",
+            "{Capital} information",
+            "{StatehoodYear} information",
+            "{StatehoodOrder} information",
+            "{Abbreviation} information"
+          ],
+          "slots": [
+            {
+              "name": "SongName",
+              "type": "AMAZON.MUSIC_RECORDING",
+              "samples": []
+            },
+            {
+              "name": "SongWriter",
+              "type": "AMAZON.MUSICIAN",
+              "samples": []
+            }
+          ]
+        },
+        {
+          "name": "QuizIntent",
+          "samples": [
+            "start a quiz",
+            "start a quiz game",
+            "and start a quiz",
+            "and quiz me",
+            "for a quiz",
+            "a quiz"
+          ],
+          "slots": []
+        }
+      ],
+      "types": [
+        {
+          "name": "AMAZON.MUSICIAN",
+          "values": [
+            {
+              "name": {
+                "value": "Elton John"
+              }
+            },
+            {
+              "name": {
+                "value": "Carole King"
+              }
+            }
+            
+          ]
+        }
+      ]
+    }
+  }
+}
