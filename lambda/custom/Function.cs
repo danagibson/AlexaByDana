@@ -10,7 +10,7 @@ using AlexaAPI;
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializerAttribute(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 
-namespace songquiz
+namespace songQuiz
 {
     public class Function
     {
@@ -22,6 +22,7 @@ namespace songquiz
 
         static int MAX_QUESTION = 10;
         AppState appstate = AppState.Start;
+        const string STATE = "state";
         const string SONG = "songname";
         const string RESPONSE = "response";
         const string QUIZITEM = "quizitem";
@@ -272,7 +273,7 @@ namespace songquiz
             var intentRequest = input.Request;
             Item item = GetItem(intentRequest.Intent.Slots, out textout);
             
-            if (item != null && item.Capital != null)
+            if (item != null && item.SongWriter != null)
             {
                 if (this.USE_CARDS_FLAG)
                 {
@@ -537,9 +538,9 @@ namespace songquiz
             string ret = string.Empty;
             switch (property)
             {
-                case "Abbreviation": ret = "The " + property + " of " + item.StateName + " is " + sayas_spellout +  item.PropertyValue(property) + sayas +". ";
+                case "SongWriter": ret = "The " + property + " of " + item.SongName + " is " + sayas_spellout +  item.PropertyValue(property);
                                      break;
-                default: ret = "The " + property + " of " + item.StateName + " is " + item.PropertyValue(property) + ". ";
+                default: ret = "The " + property + " of " + item.SongName + " is " + item.PropertyValue(property) + ". ";
                          break;
             }
             return ret;
@@ -694,19 +695,19 @@ namespace songquiz
         private string GetFinalScore(int score, int counter) { return "Your final score is " + score.ToString() + " out of " + counter.ToString() + ". "; }
 
         //This is what your card title will be. For our example, we use the name of the state the user requested.
-        private string GetCardTitle(Item item) { return item.StateName; }
+        private string GetCardTitle(Item item) { return item.SongName; }
 
         //This is the small version of the card image.  We use our data as the naming convention for our 
         //images so that we can dynamically generate the URL to the image.
         //The small image should be 720x400 in dimension.
         private string GetSmallImage(Item item)
         { return "https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/state_flag/720x400/" 
-        + item.Abbreviation + "._TTH_.png"; }
+        + item.SongWriter + "._TTH_.png"; }
 
         //This is the large version of the card image.  It should be 1200x800 pixels in dimension.
         private string GetLargeImage(Item item)
         { return "https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/state_flag/1200x800/"
-                + item.Abbreviation + "._TTH_.png"; }
+                + item.SongWriter + "._TTH_.png"; }
 
         //This is a list of positive speechcons that this skill will use when a user gets a correct answer.
         //For a full list of supported speechcons, go here:
@@ -725,7 +726,7 @@ namespace songquiz
 
 
         //This is the message a user will hear when they start a quiz.
-        string START_QUIZ_MESSAGE = "OK.  I will ask you " + MAX_QUESTION.ToString() + " questions about the United States.";
+        string START_QUIZ_MESSAGE = "OK.  I will ask you " + MAX_QUESTION.ToString() + " questions about songs and song writers.";
         
         /// <summary>
         /// Create the list of USA States with details  
