@@ -1,0 +1,10 @@
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\bin\Debug\netcoreapp2.1\rhel.7.2-x64\songQuiz.deps.json
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\bin\Debug\netcoreapp2.1\rhel.7.2-x64\songQuiz.runtimeconfig.json
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\bin\Debug\netcoreapp2.1\rhel.7.2-x64\songQuiz.runtimeconfig.dev.json
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\bin\Debug\netcoreapp2.1\rhel.7.2-x64\songQuiz.dll
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\bin\Debug\netcoreapp2.1\rhel.7.2-x64\songQuiz.pdb
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\obj\Debug\netcoreapp2.1\rhel.7.2-x64\songQuiz.csprojAssemblyReference.cache
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\obj\Debug\netcoreapp2.1\rhel.7.2-x64\songQuiz.AssemblyInfoInputs.cache
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\obj\Debug\netcoreapp2.1\rhel.7.2-x64\songQuiz.AssemblyInfo.cs
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\obj\Debug\netcoreapp2.1\rhel.7.2-x64\songQuiz.dll
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\obj\Debug\netcoreapp2.1\rhel.7.2-x64\songQuiz.pdb

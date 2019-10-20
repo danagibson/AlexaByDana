@@ -1,0 +1,3 @@
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\obj\Debug\netcoreapp1.0\songQuiz.csprojAssemblyReference.cache
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\obj\Debug\netcoreapp1.0\songQuiz.AssemblyInfoInputs.cache
+C:\Users\dgibs\github\songwriter\AlexaByDana\lambda\custom\obj\Debug\netcoreapp1.0\songQuiz.AssemblyInfo.cs
